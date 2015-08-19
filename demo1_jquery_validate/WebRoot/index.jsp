@@ -23,6 +23,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <form action="" id="userInfo">
   	 <table>
+	 <tr>
+  		<td>path路径</td>
+  		<td>${path}</td>
+  	</tr>
+	<tr>
+  		<td>basePath路径</td>
+  		<td>${basePath}</td>
+  	</tr>
   	<tr>
   		<td>用户名</td>
   		<td><input type="text" name="username" /></td>
