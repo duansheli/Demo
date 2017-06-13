@@ -1,0 +1,42 @@
+demo1_Thread(实现方式)： 
+	test01: 集成Thread
+	test02: 实现Runnable
+	test03: 实现Callable，有返回值
+	test04: 实现Callable，对任务超时处理
+
+	test: fork join 省略。。放后
+
+demo2_interrupt(中断)：
+	test5: 了解终止运行中的线程与interrupt是个啥
+	test6: 证明没有检查interrupted， 则无法停止线程
+	test7: 通过volatile设置标志位， 实现停止运行中的线程
+
+demo3_fork_join(拆分子任务)
+	test8: join 启动一个任务，阻塞当前线程
+	test9: fork 将一个任务拆分成多个任务
+	test10: fork_join 先fork启动所有的子任务，然后使用join以阻塞方式获取返回值 
+
+	test10: wordCounter 从oracle那复制的
+
+	RecurisiveTask与RecurisiveAction用法类似，
+	RecurisiveTask：有返回值
+	RecurisiveAction：沒有返回值
+
+demo4_pool(线程池): 
+-   提交一个任务 与提交一组任务
+-	sum 提交一组任务 ，可以选择等待所有返回值，或者任意一个有返回值
+-	禁止提交任务
+
+demo5_concurrent(并发工具类)
+	CountDownLatchTest 计数器
+	CyclicBarrier
+	Exchanger 两个线程间的通信
+	Semaphore 控制并发数量
+
+
+
+
+
+
+
+[.][·]
