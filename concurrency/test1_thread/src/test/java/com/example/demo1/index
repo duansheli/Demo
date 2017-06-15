@@ -26,6 +26,7 @@ demo4_pool(线程池):
 -   提交一个任务 与提交一组任务
 -	sum 提交一组任务 ，可以选择等待所有返回值，或者任意一个有返回值
 -	禁止提交任务
+    submit execute 区别为一个有返回值，一个无
 
 demo5_concurrent(并发工具类)
 	CountDownLatchTest 计数器
