@@ -54,12 +54,9 @@ public class Test9_fork {
                 ForkJoinTask<Long> fork1 = sum1.fork();
                 ForkJoinTask<Long> fork2 = sum2.fork();
                 long sum = 0;
-                try {
-                    sum = fork1.get() + fork2.get();
-                    System.out.println(sum + "  " + from + " > " + middle + " > " + to);
-                } catch (InterruptedException | ExecutionException e) {
-                    e.printStackTrace();
-                }
+                sum = sum1.join() + sum2.join();
+
+                System.out.println(sum + "  " + from + " > " + middle + " > " + to);
                 return sum;
             } else {
                 long sum = sum(from, to);
