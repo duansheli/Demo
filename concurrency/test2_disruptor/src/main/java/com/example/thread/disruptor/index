@@ -1,0 +1,24 @@
+
+disruptor是内存级别的消息框架， 编程模型为生产者-消费者。
+
+DisTest1_1P1EP
+    1. 初始化
+    2. 启动消费者监听
+    3. 使用ringBuffer发布消息
+
+DisTest2_1P2EW
+    1. 初始化参数
+    2. 绑定两个消费者
+    3. 启动
+    4. 发布消息
+
+
+消费者有两种
+EP EventProcessor 多个EP可以可以读取到同一个消息
+EW eventWork 多个EW不会读取到同一个消息
+bufferSize 需大于12，且为2的倍数
+
+
+
+
+
