@@ -1,7 +1,6 @@
 
 package com.example.demo3;
 
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
@@ -51,8 +50,8 @@ public class Test9_fork {
                 Sum sum1 = new Sum(from, middle);
                 Sum sum2 = new Sum(middle, to);
 
-                ForkJoinTask<Long> fork1 = sum1.fork();
-                ForkJoinTask<Long> fork2 = sum2.fork();
+                sum1.fork();
+                sum2.fork();
                 long sum = 0;
                 sum = sum1.join() + sum2.join();
 
