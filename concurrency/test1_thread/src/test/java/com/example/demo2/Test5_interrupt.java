@@ -38,7 +38,6 @@ public class Test5_interrupt {
             }
             return "abc" ;
         }
-
     }
 
 }

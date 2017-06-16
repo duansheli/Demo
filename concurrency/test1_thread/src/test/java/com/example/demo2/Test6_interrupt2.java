@@ -6,6 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+import com.example.demo1.Autil;
+
 /**  
 * 如何终止一个运行中的线程
 * 2. 通过对异常InterruptedException的catch ， 线程并不能被终止。 
@@ -19,7 +21,7 @@ public class Test6_interrupt2 {
         Future<String> sb = pool.submit(new Task());
 
         System.out.println("任务全部提交");
-        TimeUnit.MILLISECONDS.sleep(700);
+        TimeUnit.SECONDS.sleep(2);
 
         sb.cancel(true);
         System.out.println("停止任务");
@@ -41,11 +43,7 @@ public class Test6_interrupt2 {
 
             for (int i = 0; i < 10; i++) {
                 System.out.println(111 + i);
-                try {
-                    TimeUnit.MILLISECONDS.sleep(200);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                Autil.w1s(1);
 
                 if (Thread.currentThread().isInterrupted()) {
                     System.out.println("线程已收到中断请求");
