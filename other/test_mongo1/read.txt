@@ -1,0 +1,35 @@
+-------------------------------------------------------
+管理员 aaa 123
+指纹用户 ddd 123
+
+数据库连接 mongodb://android:123@121.196.207.14:20107/db_phone_data
+表名 android_fingers
+-------------------------------------------------------
+1. 通过docker创建mongo
+#创建mongo持久化目录
+mkdir -p /usr/local/graft/mongodata
+
+docker pull mongo:3.4.6
+docker run --name mongo -p 20107:27017 \
+  -v /usr/local/graft/mongodata:/data/db \
+  -d mongo:3.4.6 --auth --storageEngine wiredTiger
+
+2. 进入容器
+docker-enter mongo
+
+3. 创建管理员
+mongo 127.0.0.1:27017/admin
+db.createUser({ user: 'aaa', pwd: '123', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] });
+
+
+4. 创建普通用户及数据库
+ctrl + c 退出重新登陆
+mongo 127.0.0.1:27017/admin -uaaa -p123 
+
+use db_test_data
+db.createUser({user:"u1",pwd:"123",roles:["readWrite"]})
+
+-------------------------------------------------------
+mongo 127.0.0.1:27017/db_test_data -uu1  -p123 
+db.phone_key.find().pretty()
+
