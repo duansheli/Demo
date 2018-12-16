@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fluffy</groupId>
-    <artifactId>test3_redis</artifactId>
+    <artifactId>test3-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>test3_redis</name>
+    <name>test3-redis</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -23,7 +23,7 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
+            <version>3.0.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

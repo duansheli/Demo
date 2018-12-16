@@ -155,10 +155,9 @@ public class TestRedis {
         jedis.lpush(key, "H");
         jedis.lpush(key, "P");
         jedis.lpush(key, "W");
-
         System.out.println(jedis.lrange(key, 0, -1));
-        SortingParams sp = new SortingParams();
 
+        SortingParams sp = new SortingParams();
         sp.limit(0, 2) // 可用于分页查询
                 .alpha()// 字符串排序
                 .asc();// 倒序
