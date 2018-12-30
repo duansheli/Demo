@@ -4,12 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fluffy</groupId>
-    <artifactId>test3_netty</artifactId>
+    <artifactId>de-netty</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>test3_netty</name>
-    <description>Demo project for Spring Boot</description>
+    <name>de-netty</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,7 +50,6 @@
             <version>4.3.4.RELEASE</version>
         </dependency>
     </dependencies>
-
 
 
 </project>
