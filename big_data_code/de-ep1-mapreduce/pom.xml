@@ -3,13 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.example</groupId>
-	<artifactId>test1_mapreduce</artifactId>
+	<groupId>fluffy.mo</groupId>
+	<artifactId>de-ep1-mapreduce</artifactId>
 	<version>0.1</version>
 	<packaging>jar</packaging>
 
-	<name>test1_mapreduce</name>
-	<description>test_mapreduce</description>
+	<name>de-ep1-mapreduce</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
